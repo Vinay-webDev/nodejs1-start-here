@@ -23,7 +23,7 @@ console.log(aplusb(3,5)); */
 //-----------------------------------------------------------------//
 // how to import modules in node
 //  here in node import ====>>> require();
-
+/*
 const os = require('os');
 //console.log(os);
 console.log(os.type());
@@ -39,12 +39,18 @@ console.log(path.basename(__filename));
 console.log(path.extname(__filename));
 // as we can see console.log(__dirname) and console.log(path.dirname(__filename)) are the same but path. comes in handy***
 //we get all of these in a single method 
-console.log(path.parse(__filename));
+console.log(path.parse(__filename)); */
 
-
-
-
-
+//--------------------------------------------------------------//
+// we can create our own modules (custom modules)
+// importing our own module
+// because it is not a commonjs core module we can't just write 'math' we have to write './math' no need to write the extension****
+const math = require('./math');
+console.log(math.add(5,3));
+console.log(math.subtract(5,3));
+console.log(math.multiply(5,3));
+console.log(math.divide(5,3)); 
+//==================//
 
 
 
