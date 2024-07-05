@@ -16,17 +16,30 @@ function aplusb(a,b) {
 }
 console.log(aplusb(3,5)); */
 //3. Here we have golbal object instead of window object ==>> again window object is on browser
-console.log(global);
+//console.log(global);
+//4. Has common core module that we'll explore
+//5. CommonJs modules instead of ES6 modules
 
+//-----------------------------------------------------------------//
+// how to import modules in node
+//  here in node import ====>>> require();
 
-
-
-
-
-
-
-
-
+const os = require('os');
+//console.log(os);
+console.log(os.type());
+console.log(os.version());
+console.log(os.homedir());
+// also there are other values that are available 
+console.log(__dirname);
+console.log(__filename);
+// we can also import other modules as well
+const path = require('path');
+console.log(path.dirname(__filename));
+console.log(path.basename(__filename));
+console.log(path.extname(__filename));
+// as we can see console.log(__dirname) and console.log(path.dirname(__filename)) are the same but path. comes in handy***
+//we get all of these in a single method 
+console.log(path.parse(__filename));
 
 
 
