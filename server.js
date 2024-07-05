@@ -45,15 +45,19 @@ console.log(path.parse(__filename)); */
 // we can create our own modules (custom modules)
 // importing our own module
 // because it is not a commonjs core module we can't just write 'math' we have to write './math' no need to write the extension****
+/*
 const math = require('./math');
 console.log(math.add(5,3));
 console.log(math.subtract(5,3));
 console.log(math.multiply(5,3));
-console.log(math.divide(5,3)); 
+console.log(math.divide(5,3));  */
 //==================//
-
-
-
+//  destructure 
+const { add, subtract, multiply, divide } = require('./math');
+console.log(add(5,3));
+console.log(subtract(5,3));
+console.log(multiply(5,3));
+console.log(divide(5,3));
 
 
 
